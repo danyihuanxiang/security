@@ -16,12 +16,16 @@ public class User {
      private String id;
     @JsonView(UserSimpleView.class)
     @MyConstraint(message = "这是一个测试")
-    private String name;
+    private String username;
     @JsonView(UserDetailView.class)
 
     @NotBlank(message = "密码不能为空")
-    private String passWord;
+    private String password;
     private int age;
     @Past(message = "时间必须是过去的时间")
     private Date birthday;
+
+
+
+
 }

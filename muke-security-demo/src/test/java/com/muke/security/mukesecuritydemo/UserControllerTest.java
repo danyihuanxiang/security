@@ -1,22 +1,8 @@
 package com.muke.security.mukesecuritydemo;
 
-import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.web.JsonPath;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
-
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.util.Date;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -26,15 +12,15 @@ public class UserControllerTest {
      * //测试用例
      * 构造一个伪的mvc环境
      */
-    @Autowired
+   /* @Autowired
     private WebApplicationContext wac;
 
-    private MockMvc mockMvc;
+    private MockMvc mockMvc;*/
 
     /**
      * 在所有方法之前执行，构造一个伪的mvc环境
      */
-    @Before
+   /* @Before
     public  void  before(){
         mockMvc= MockMvcBuilders.webAppContextSetup(wac).build();
     }
@@ -45,9 +31,9 @@ public class UserControllerTest {
                 .param("name", "jojo")
                 .param("passWord", "123")
                 .param("age", "12")
-                /*       .param("size","10")
+                *//*       .param("size","10")
                        .param("page","3")
-                       .param("sort","age,desc")*/
+                       .param("sort","age,desc")*//*
                 .contentType(MediaType.APPLICATION_JSON_UTF8))
                 //判断状态是不是为200
                 .andExpect(MockMvcResultMatchers.status().isOk())
@@ -113,5 +99,5 @@ public class UserControllerTest {
                 .andReturn().getResponse().getContentAsString();
         System.out.println(result);
 
-    }
+    }*/
 }
